@@ -11,6 +11,8 @@
 .todo input {
   background: transparent;
   border: none;
+  font-size:4rem;
+  font-weight:bold;
   color: black;
   border-bottom: 5px dashed black;
   min-width: 400px;
@@ -107,4 +109,10 @@ MEDIA QUERIES
   .todo input {
     min-width: 220px;
   }
+  .todo ul li {
+    margin-left: -50px;
+  }
 }
+
+
+

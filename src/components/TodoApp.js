@@ -20,8 +20,10 @@ function TodoApp() {
       setTaskList([...tasklist, taskDetails]);
     }
   };
+
+
   const EditTask = (id) => {
-    const newTask = prompt("Enter the new task");
+    const newTask = prompt("Edit Task");
     setTaskList(tasklist
       .map((task) => {
         if (task.id === id) {
@@ -59,6 +61,7 @@ function TodoApp() {
         {tasklist.map((task) => (
           <li key={task.id}>
             <span
+            className={task.isCompleted ? "crossText" : "listitem"}
               style={{
                 textDecoration: task.isCompleted ? "line-through" : "none",
               }}
@@ -76,15 +79,6 @@ function TodoApp() {
     </div>
   );
 }
-
-
-
-
-
-
-
-
-
 
 
 //     <div className="todo">
